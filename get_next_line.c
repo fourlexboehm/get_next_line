@@ -6,15 +6,20 @@
 /*   By: aboehm <aboehm@42adel.org>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 14:22:24 by aboehm            #+#    #+#             */
-/*   Updated: 2021/10/06 01:42:20 by aboehm           ###   ########.fr       */
+/*   Updated: 2021/10/09 20:28:30 by aboehm           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *appendline(char **s)
+char *appendline(char **s, int fd)
 {
-	
+	char **tmp;
+
+	tmp = ft_split(s[fd], '\n');
+	free(s[fd]);
+	s[fd] = ft_strdup(tmp[1]);
+	return (tmp[0]);
 }
 
 char *get_next_line(int fd)
@@ -29,7 +34,6 @@ char *get_next_line(int fd)
 	nbytes = read(fd, buffer, BUFFER_SIZE);
 	while(nbytes)
 	{
-		printf("%d", fd);
 		buffer[nbytes] = '\0';
 		if (s[fd] == NULL)
 			s[fd] = ft_strdup(buffer);
@@ -44,6 +48,5 @@ char *get_next_line(int fd)
 		nbytes = read(fd, buffer, BUFFER_SIZE);
 	}
 	buffer[nbytes] = '\0';
-	return (appendline(char **s));
+	return (appendline(s, fd));
 }
-

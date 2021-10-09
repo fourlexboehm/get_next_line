@@ -1,5 +1,0 @@
-this is a buffer of text.
-t2his is a buffer of text.
-t3his is a buffer of text.
-t4jhis is a buffer of text.
-t5his is a buffer of text.

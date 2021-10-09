@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 github.c
+test.txt
+test.c
 # Object files
 *.o
 *.ko

@@ -6,7 +6,7 @@
 /*   By: aboehm <aboehm@42adel.org>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 14:22:24 by aboehm            #+#    #+#             */
-/*   Updated: 2021/10/01 22:33:24 by aboehm           ###   ########.fr       */
+/*   Updated: 2021/10/09 20:30:59 by aboehm           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@
 # include <unistd.h>
 # include <fcntl.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(const char *s);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-int		ft_strlen(char *str);
-char	*ft_strchr(const char *s, int c);
-char	*get_next_line(int fd);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strchr(const char *s, int c);
+char		*ft_strdup(const char *s);
+void		*ft_memcpy(void *dst, const void *src, size_t n);
+int			ft_strlen(char *str);
+char		*ft_strchr(const char *s, int c);
+char		*get_next_line(int fd);
+char		**ft_split(char const *str, char c);
 
 #endif
